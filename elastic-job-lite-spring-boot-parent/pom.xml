@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>elastic-job-lite-spring-boot-project</artifactId>
+        <groupId>com.huitongjy.elasticjob.boot</groupId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>elastic-job-lite-spring-boot-parent</artifactId>
+    <packaging>pom</packaging>
+    <name>Elastic Job Lite Spring Boot Parent</name>
+    <description>Elastic Job Lite Spring Boot Parent</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <java.source.version>1.8</java.source.version>
+        <java.target.version>1.8</java.target.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring-boot.version>2.2.6.RELEASE</spring-boot.version>
+        <lombok.version>1.18.12</lombok.version>
+        <elastic.spring.project.version>1.0.0</elastic.spring.project.version>
+        <!-- Build args -->
+        <argline>-server -Xms256m -Xmx512m -XX:PermSize=64m -XX:MaxPermSize=128m -Dfile.encoding=UTF-8
+            -Djava.net.preferIPv4Stack=true
+        </argline>
+
+        <!-- Maven plugins -->
+        <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
+        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+        <maven-jacoco-plugin.version>0.8.1</maven-jacoco-plugin.version>
+        <maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>
+        <apache-rat-plugin.version>0.12</apache-rat-plugin.version>
+        <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+        <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
+        <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Spring Boot -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Elastic Job Spring Context -->
+            <dependency>
+                <groupId>com.huitongjy.elasticjob.spring</groupId>
+                <artifactId>elastic-job-lite-spring-context</artifactId>
+                <version>${elastic.spring.project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.huitongjy.elasticjob.boot</groupId>
+                <artifactId>elastic-job-lite-spring-boot-autoconfigure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

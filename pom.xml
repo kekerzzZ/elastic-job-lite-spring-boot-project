@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.huitongjy.elasticjob.boot</groupId>
+    <artifactId>elastic-job-lite-spring-boot-project</artifactId>
+    <version>1.0.0</version>
+
+    <packaging>pom</packaging>
+
+    <name>Elastic Job Lite Spring Boot Project</name>
+    <description>Elastic Job Lite Spring Boot Project</description>
+
+    <developers>
+        <developer>
+            <id>keker</id>
+            <name>zhaoke</name>
+            <url>http://elasticjob.io/</url>
+            <email>asdzhaoke@163.com</email>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <properties>
+        <maven_javadoc_version>3.0.1</maven_javadoc_version>
+        <maven_surefire_version>2.19.1</maven_surefire_version>
+        <maven-source-plugin.version>3.1.0</maven-source-plugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <modules>
+        <module>elastic-job-lite-spring-boot-starter</module>
+        <module>elastic-job-lite-spring-boot-parent</module>
+        <module>elastic-job-lite-spring-boot-autoconfigure</module>
+    </modules>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven-source-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <!-- 这里的ID一定要在maven setting文件中存在于server下的ID, URL替换为私服地址 -->
+        <snapshotRepository>
+            <id>thirdparty</id>
+            <name>Third Party Snapshot Repository</name>
+            <url>http://127.0.0.1:8081/nexus/content/repositories/snapshot/thirdparty</url>
+            <layout>default</layout>
+        </snapshotRepository>
+        <repository>
+            <id>thirdparty</id>
+            <name>Thirdparty Party Repository</name>
+            <url>http://172.16.10.43:8081/nexus/content/repositories/thirdparty</url>
+            <layout>default</layout>
+        </repository>
+    </distributionManagement>
+
+</project>

@@ -1,0 +1,77 @@
+{
+  "groups": [
+    {
+      "name": "elastic.job.lite.config",
+      "type": "com.huitongjy.boot.elastic.config.properties.BootCompositeJobLiteConfigProperties",
+      "sourceType": "com.huitongjy.boot.elastic.config.properties.BootCompositeJobLiteConfigProperties"
+    },
+    {
+      "name": "elastic.job.lite.config.zookeeper",
+      "type": "com.huitongjy.boot.elastic.config.properties.BootZookeeperConfigProperties",
+      "sourceType": "com.huitongjy.boot.elastic.config.properties.BootZookeeperConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "elastic.job.lite.config.data-flow-job-config",
+      "type": "java.util.Map<java.lang.String,com.huitongjy.elastic.job.spring.properties.DataFlowJobLiteConfigProperties>",
+      "sourceType": "com.huitongjy.boot.elastic.config.properties.BootCompositeJobLiteConfigProperties"
+    },
+    {
+      "name": "elastic.job.lite.config.script-job-config",
+      "type": "java.util.Map<java.lang.String,com.huitongjy.elastic.job.spring.properties.ScriptJobLiteConfigProperties>",
+      "sourceType": "com.huitongjy.boot.elastic.config.properties.BootCompositeJobLiteConfigProperties"
+    },
+    {
+      "name": "elastic.job.lite.config.simple-job-config",
+      "type": "java.util.Map<java.lang.String,com.huitongjy.elastic.job.spring.properties.SimpleJobLiteConfigProperties>",
+      "sourceType": "com.huitongjy.boot.elastic.config.properties.BootCompositeJobLiteConfigProperties"
+    },
+    {
+      "name": "elastic.job.lite.config.zookeeper.base-sleep-time-milliseconds",
+      "type": "java.lang.Integer",
+      "sourceType": "com.huitongjy.boot.elastic.config.properties.BootZookeeperConfigProperties"
+    },
+    {
+      "name": "elastic.job.lite.config.zookeeper.connection-timeout-milliseconds",
+      "type": "java.lang.Integer",
+      "sourceType": "com.huitongjy.boot.elastic.config.properties.BootZookeeperConfigProperties"
+    },
+    {
+      "name": "elastic.job.lite.config.zookeeper.digest",
+      "type": "java.lang.String",
+      "sourceType": "com.huitongjy.boot.elastic.config.properties.BootZookeeperConfigProperties"
+    },
+    {
+      "name": "elastic.job.lite.config.zookeeper.id",
+      "type": "java.lang.String",
+      "sourceType": "com.huitongjy.boot.elastic.config.properties.BootZookeeperConfigProperties"
+    },
+    {
+      "name": "elastic.job.lite.config.zookeeper.max-retries",
+      "type": "java.lang.Integer",
+      "sourceType": "com.huitongjy.boot.elastic.config.properties.BootZookeeperConfigProperties"
+    },
+    {
+      "name": "elastic.job.lite.config.zookeeper.max-sleep-time-milliseconds",
+      "type": "java.lang.Integer",
+      "sourceType": "com.huitongjy.boot.elastic.config.properties.BootZookeeperConfigProperties"
+    },
+    {
+      "name": "elastic.job.lite.config.zookeeper.namespace",
+      "type": "java.lang.String",
+      "sourceType": "com.huitongjy.boot.elastic.config.properties.BootZookeeperConfigProperties"
+    },
+    {
+      "name": "elastic.job.lite.config.zookeeper.server-lists",
+      "type": "java.lang.String",
+      "sourceType": "com.huitongjy.boot.elastic.config.properties.BootZookeeperConfigProperties"
+    },
+    {
+      "name": "elastic.job.lite.config.zookeeper.session-timeout-milliseconds",
+      "type": "java.lang.Integer",
+      "sourceType": "com.huitongjy.boot.elastic.config.properties.BootZookeeperConfigProperties"
+    }
+  ],
+  "hints": []
+}
