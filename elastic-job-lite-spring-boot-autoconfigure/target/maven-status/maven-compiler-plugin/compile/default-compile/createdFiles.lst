@@ -1,8 +1,0 @@
-META-INF/spring-configuration-metadata.json
-com/huitongjy/boot/elastic/config/constant/ConfigConstants.class
-com/huitongjy/boot/elastic/config/util/ConfigPropertiesUtils.class
-com/huitongjy/boot/elastic/config/autoconfigure/BootZookeeperBeanDefinitionRegistrar.class
-com/huitongjy/boot/elastic/config/properties/BootCompositeJobLiteConfigProperties.class
-com/huitongjy/boot/elastic/config/properties/BootZookeeperConfigProperties.class
-com/huitongjy/boot/elastic/config/autoconfigure/ElasticJobLiteAutoConfiguration.class
-com/huitongjy/boot/elastic/config/autoconfigure/BootCompositeBeanDefinitionRegistrar.class

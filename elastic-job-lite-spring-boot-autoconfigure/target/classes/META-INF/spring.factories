@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.huitongjy.boot.elastic.config.autoconfigure.ElasticJobLiteAutoConfiguration
