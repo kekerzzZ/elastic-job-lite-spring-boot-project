@@ -103,6 +103,7 @@
             <url>http://127.0.0.1:8080/nexus/content/repositories/snapshots</url>
             <layout>default</layout>
         </snapshotRepository>
+
         <repository>
             <id>thirdparty</id>
             <name>Thirdparty Party Repository</name>
